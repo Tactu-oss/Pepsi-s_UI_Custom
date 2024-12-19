@@ -7313,7 +7313,7 @@ function library:CreateWindow(options, ...)
 			Side = "right"
 		})
 		local detailssection = designer:CreateSection({
-			Name = "More Info"
+			Name = "Credits"
 		})
 		local filessection = designer:CreateSection({
 			Name = "Profiles",
@@ -7473,7 +7473,7 @@ function library:CreateWindow(options, ...)
 		end
 		if options.Credit ~= false then
 			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				Text = "Library by Pepsi#5229 "
+				Text = "Hub made by: King & Jakob "
 			}}
 		elseif "Gee, thanks for your support." then
 		end
@@ -7481,12 +7481,12 @@ function library:CreateWindow(options, ...)
 			local typ = type(options.Info)
 			if typ == "string" then
 				daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-					Text = options.Info
+					Text = options.Info.."Testing"
 				}}
 			elseif typ == "table" and #options.Info > 0 then
 				for _, v in next, options.Info do
 					daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-						Text = tostring(v)
+						Text = tostring(v).."Testing"
 					}}
 				end
 			end
