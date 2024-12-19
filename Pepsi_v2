@@ -7419,7 +7419,7 @@ function library:CreateWindow(options, ...)
 				lasthidebing = os.clock()
 			end
 		}}, {"AddLabel", "__Designer.Label.Version", settingssection, {
-			Name = "Library Version: " .. tostring(library.Version or "?")
+			Name = "Legacy Hub Version: 1.0"
 		}}}
 		if setclipboard and daaata[8] then
 			local common_table = daaata[8][4]
@@ -7473,7 +7473,7 @@ function library:CreateWindow(options, ...)
 		end
 		if options.Credit ~= false then
 			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				Text = "Hub made by: King & Jakob "
+				Text = "Made by: King & Jakob "
 			}}
 		elseif "Gee, thanks for your support." then
 		end
@@ -7481,12 +7481,12 @@ function library:CreateWindow(options, ...)
 			local typ = type(options.Info)
 			if typ == "string" then
 				daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-					Text = options.Info.."Testing"
+					Text = "6g6xA24nn5"
 				}}
 			elseif typ == "table" and #options.Info > 0 then
 				for _, v in next, options.Info do
 					daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-						Text = tostring(v).."Testing"
+						Text = "6g6xA24nn5"
 					}}
 				end
 			end
