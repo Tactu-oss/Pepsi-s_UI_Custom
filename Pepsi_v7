@@ -7482,37 +7482,20 @@ function library:CreateWindow(options, ...)
 		end
 		if options.Credit ~= false then
 
-detailssection:AddLabel({
-    Text = "Made by: King"
-})
-detailssection:AddLabel({
-    Text = "Contributor: Jakob"
-})
-detailssection:AddButton({
-    Name = "Copy Discord Link",
-    Flag = "detailssection_discordlink",
-    Callback = function()
-        local copy = "https://discord.gg/6g6xA24nn5"
-		setclipboard(tostring(copy))
-    end
-})
-
---[[
-if options.Info then
-	local typ = type(options.Info)
-	if typ == "string" then
 		daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-			Text = "Discord Server: 6g6xA24nn5"
+			Text = "Made by: King"
 		}}
-	elseif typ == "table" and #options.Info > 0 then
-		for _, v in next, options.Info do
-			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				Text = "Discord Server: 6g6xA24nn5"
-			}}
-		end
-	end
-end
-]]
+		daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
+			Text = "Contributor: Jakob"
+		}}
+		daaata[1 + #daaata] = {"AddButton", "__Designer.Label.Creator", detailssection, {
+			Name = "Copy Discord Link",
+    			Flag = "detailssection_discordlink",
+    			Callback = function()
+        			local copy = "https://discord.gg/6g6xA24nn5"
+					setclipboard(tostring(copy))
+    			end
+		}}
 
 		for _, v in next, daaata do
 			designerelements[v[2]] = v[3][v[1]](v[3], v[4])
