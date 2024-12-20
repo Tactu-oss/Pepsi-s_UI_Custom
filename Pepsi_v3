@@ -980,6 +980,8 @@ function library.unload()
 		end
 	end
 
+warn("Unloaded")
+
 if getgenv().LegacyHubWindow ~= nil then
     if getgenv().LegacyHubWindow == true then
         	getgenv().LegacyHubWindow = false
@@ -987,7 +989,6 @@ if getgenv().LegacyHubWindow ~= nil then
     end
 end
 
-	warn("Unloaded")
 end
 library.Unload = library.unload
 local Instance_new = (syn and syn.protect_gui and function(...)
