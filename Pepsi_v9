@@ -7481,7 +7481,6 @@ function library:CreateWindow(options, ...)
 			end
 		end
 		if options.Credit ~= false then
-
 		daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
 			Text = "Made by: King"
 		}}
@@ -7496,6 +7495,7 @@ function library:CreateWindow(options, ...)
 					setclipboard(tostring(copy))
     			end
 		}}
+		end
 
 		for _, v in next, daaata do
 			designerelements[v[2]] = v[3][v[1]](v[3], v[4])
