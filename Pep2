@@ -6556,13 +6556,8 @@ function library:CreateWindow(options, ...)
 					dropdownName, callback = options.Name or dropdownName, options.Callback
 					local sstr = (passed_multiselect == "string" and multiselect) or (library_flags[flagName] and tostring(library_flags[flagName])) or (selectedOption and tostring(selectedOption)) or blankstring or "nil"
 					if dropdownSelection.Text ~= sstr then
-						dropdownSelection.Text = tostring(selectedOption[1])
-
-print(tostring(selectedOption[1]))
-print(tostring(sstr))
-print(tostring(sstr[1]))
-print(tostring(multiselect))
-
+					     local selectedOptions = table.concat(selectedOption, ", ")
+					     dropdownSelection.Text = "Selected: "..tostring(selectedOptions)
 					end
 					dropdownHeadline.Text = (dropdownName and tostring(dropdownName)) or "???"
 					return sstr
