@@ -4738,7 +4738,7 @@ function library:CreateWindow(options, ...)
 										end
 										return
 									else
-										dropdownSelection.Text = stringed
+										dropdownSelection.Text = "Test8"
 										if selectedOption ~= v then
 											local last_v = library_flags[flagName]
 											do
@@ -4777,7 +4777,7 @@ function library:CreateWindow(options, ...)
 											if options.Location then
 												options.Location[options.LocationFlag or flagName] = selectedOption
 											end
-											dropdownSelection.Text = tostring(selectedOption)
+											dropdownSelection.Text = "Test9"
 											if submenuOpen then
 												submenuOpen = nil
 											end
@@ -4956,7 +4956,7 @@ function library:CreateWindow(options, ...)
 					end
 					local sstr = (selectedOption and tostring(selectedOption)) or blankstring or "No Blank String"
 					if dropdownSelection.Text ~= sstr then
-						dropdownSelection.Text = sstr
+						dropdownSelection.Text = "Test10"
 					end
 					if callback and (last_v ~= str or options.AllowDuplicateCalls) then
 						task.spawn(callback, str, last_v)
@@ -5008,7 +5008,7 @@ function library:CreateWindow(options, ...)
 					dropdownName, callback = options.Name or dropdownName, options.Callback
 					local sstr = (passed_multiselect == "string" and multiselect) or (not multiselect and library_flags[flagName] and tostring(library_flags[flagName])) or (not multiselect and selectedOption and tostring(selectedOption)) or blankstring or "Nothing"
 					if dropdownSelection.Text ~= sstr then
-						dropdownSelection.Text = sstr
+						dropdownSelection.Text = "Test11"
 					end
 					dropdownHeadline.Text = (dropdownName and tostring(dropdownName)) or "???"
 					return sstr
@@ -5412,7 +5412,7 @@ function library:CreateWindow(options, ...)
 								optionButton.TextSize = 14
 								optionButton.TextXAlignment = Enum.TextXAlignment.Left
 								library.signals[1 + #library.signals] = optionButton.MouseButton1Down:Connect(function()
-									dropdownSelection.Text = tostring(v)
+									dropdownSelection.Text = "Test12"
 									restorezindex[newSection] = restorezindex[newSection] or newSection.ZIndex
 									restorezindex[newDropdown] = restorezindex[newDropdown] or newDropdown.ZIndex
 									restorezindex[sectionHolder] = restorezindex[sectionHolder] or sectionHolder.ZIndex
@@ -5443,7 +5443,7 @@ function library:CreateWindow(options, ...)
 										if options.Location then
 											options.Location[options.LocationFlag or flagName] = selectedOption
 										end
-										dropdownSelection.Text = tostring(selectedOption)
+										dropdownSelection.Text = "Test13"
 										if submenuOpen then
 											submenuOpen = nil
 										end
@@ -5566,7 +5566,7 @@ function library:CreateWindow(options, ...)
 						end
 						local sstr = (selectedOption and tostring(selectedOption)) or blankstring or "No Blank String"
 						if dropdownSelection.Text ~= sstr then
-							dropdownSelection.Text = sstr
+							dropdownSelection.Text = "Test14"
 						end
 						if callback and (last_v ~= str or options.AllowDuplicateCalls) then
 							task.spawn(callback, str, last_v)
@@ -5855,7 +5855,7 @@ function library:CreateWindow(options, ...)
 						dropdownName, custom_workspace, persistiveflags, suffix, callback, loadcallback, savecallback, postload, postsave = options.Name or dropdownName, options.Workspace or library.WorkspaceName, options.Persistive or options.Flags or "all", options.Suffix, options.Callback, options.LoadCallback, options.SaveCallback, options.PostLoadCallback, options.PostSaveCallback
 						local sstr = tostring(library_flags[flagName])
 						if dropdownSelection.Text ~= sstr then
-							dropdownSelection.Text = sstr
+							dropdownSelection.Text = "Test15"
 						end
 						dropdownHeadline.Text = (dropdownName and tostring(dropdownName)) or "???"
 						return sstr
@@ -6246,7 +6246,7 @@ function library:CreateWindow(options, ...)
 					end
 					local sstr = (selectedOption and tostring(selectedOption)) or blankstring or "No Blank String"
 					if dropdownSelection.Text ~= sstr then
-						dropdownSelection.Text = sstr
+						dropdownSelection.Text = "Test16"
 					end
 					if callback and (last_v ~= str or options.AllowDuplicateCalls) then
 						task.spawn(callback, str, last_v)
@@ -6375,7 +6375,7 @@ function library:CreateWindow(options, ...)
 										selectedObjects[2].Text = selectedObjects[2].Name
 										selectedObjects[2].TextColor3 = library.colors.otherElementText
 										selectedOption = v
-										dropdownSelection.Text = stringed
+										dropdownSelection.Text = "Test16"
 										selectedObjects[1] = newOption
 										selectedObjects[2] = optionButton
 										newOption.BackgroundColor3 = library.colors.selectedOption
@@ -6556,7 +6556,7 @@ function library:CreateWindow(options, ...)
 					dropdownName, callback = options.Name or dropdownName, options.Callback
 					local sstr = (passed_multiselect == "string" and multiselect) or (library_flags[flagName] and tostring(library_flags[flagName])) or (selectedOption and tostring(selectedOption)) or blankstring or "nil"
 					if dropdownSelection.Text ~= sstr then
-						dropdownSelection.Text = sstr
+						dropdownSelection.Text = "Test18"
 					end
 					dropdownHeadline.Text = (dropdownName and tostring(dropdownName)) or "???"
 					return sstr
