@@ -7481,13 +7481,9 @@ function library:CreateWindow(options, ...)
 			end
 		end
 		if options.Credit ~= false then
-
-			--[[
 daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
 	Text = "Made by: King"
 }}
-]]
-
 		elseif "Gee, thanks for your support." then
 		end
 
