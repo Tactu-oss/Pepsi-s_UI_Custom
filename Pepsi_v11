@@ -7480,29 +7480,30 @@ function library:CreateWindow(options, ...)
 				common_table = nil
 			end
 		end
-		if options.Credit ~= false then
-daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-	Text = "Made by: King"
-}}
-		elseif "Gee, thanks for your support." then
-		end
-if options.Credit ~= false then
-daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-	Text = "Contributor: Jakob"
-}}
-		elseif "Gee, thanks for your support." then
-		end
-if options.Credit ~= false then
-daaata[1 + #daaata] = {"AddButton", "__Designer.Label.Creator", detailssection, {
-	Name = "Copy Discord Link",
-    			Flag = "detailssection_discordlink",
-    			Callback = function()
-        			local copy = "https://discord.gg/6g6xA24nn5"
-					setclipboard(tostring(copy))
-    			end
-}}
-		elseif "Gee, thanks for your support." then
-		end
+
+	if options.Credit ~= false then
+		daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
+			Text = "Made by: King"
+		}}
+	elseif "Gee, thanks for your support." then
+	end
+	if options.Credit ~= false then
+		daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
+			Text = "Contributor: Jakob"
+		}}
+	elseif "Gee, thanks for your support." then
+	end
+	if options.Credit ~= false then
+		daaata[1 + #daaata] = {"AddButton", "__Designer.Label.Creator", detailssection, {
+			Name = "Copy Discord Link",
+			Flag = "detailssection_discordlink",
+			Callback = function()
+				local copy = "https://discord.gg/6g6xA24nn5"
+				setclipboard(tostring(copy))
+			end
+		}}
+	elseif "Gee, thanks for your support." then
+	end
 
 --[[
 if options.Info then
