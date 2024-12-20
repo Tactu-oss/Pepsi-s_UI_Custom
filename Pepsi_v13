@@ -1212,7 +1212,7 @@ local function makeDraggable(topBarObject, object)
 		if input == dragInput and dragging then
 			local delta = input.Position - dragStart
 			if not isDraggingSomething and library.configuration.smoothDragging then
-				tweenService:Create(object, TweenInfo.new(0.5, library.configuration.easingStyle, library.configuration.easingDirection), {
+				tweenService:Create(object, TweenInfo.new(0.35, library.configuration.easingStyle, library.configuration.easingDirection), {
 					Position = UDim2.new(startPosition.X.Scale, startPosition.X.Offset + delta.X, startPosition.Y.Scale, startPosition.Y.Offset + delta.Y)
 				}):Play()
 			elseif not isDraggingSomething and not library.configuration.smoothDragging then
