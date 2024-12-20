@@ -979,6 +979,14 @@ function library.unload()
 			shared.libraries = nil
 		end
 	end
+
+if getgenv().LegacyHubWindow ~= nil then
+    if getgenv().LegacyHubWindow == true then
+        	getgenv().LegacyHubWindow = false
+        return
+    end
+end
+
 	warn("Unloaded")
 end
 library.Unload = library.unload
