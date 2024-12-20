@@ -6349,8 +6349,12 @@ function library:CreateWindow(options, ...)
 									newOption.BackgroundColor3 = (togged and library.colors.selectedOption) or library.colors.topGradient
 									newOption.ImageColor3 = (togged and library.colors.unselectedOption) or library.colors.bottomGradient
 									optionButton.TextColor3 = (togged and library.colors.main) or library.colors.otherElementText
-									local selectedOptions = table.concat(selectedOption, ", ")
-									dropdownSelection.Text = tostring(selectedOptions)
+									if selectedOption == nil then
+     										dropdownSelection.Text = "Select Item(s)"
+									else
+    										local selectedOptions = table.concat(selectedOption, ", ")
+    										dropdownSelection.Text = tostring(selectedOptions)
+									end
 									if callback then
 										task.spawn(callback, selectedOption, cloned)
 									end
@@ -6557,8 +6561,12 @@ function library:CreateWindow(options, ...)
 					dropdownName, callback = options.Name or dropdownName, options.Callback
 					local sstr = (passed_multiselect == "string" and multiselect) or (library_flags[flagName] and tostring(library_flags[flagName])) or (selectedOption and tostring(selectedOption)) or blankstring or "nil"
 					if dropdownSelection.Text ~= sstr then
-					     local selectedOptions = table.concat(selectedOption, ", ")
-					     dropdownSelection.Text = tostring(selectedOptions)
+					     if selectedOption == nil then
+     						     dropdownSelection.Text = "Select Item(s)"
+						else
+    						     local selectedOptions = table.concat(selectedOption, ", ")
+    						     dropdownSelection.Text = tostring(selectedOptions)
+					     end
 					end
 					dropdownHeadline.Text = (dropdownName and tostring(dropdownName)) or "???"
 					return sstr
