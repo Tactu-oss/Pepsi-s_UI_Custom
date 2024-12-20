@@ -7481,21 +7481,14 @@ function library:CreateWindow(options, ...)
 			end
 		end
 		if options.Credit ~= false then
-daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-	Text = "Made by: King"
-}}
-		elseif "Gee, thanks for your support." then
-		end
 
---Premium Button & Discord System
+detailssection:AddLabel({
+    Text = "Made by: King"
+})
+detailssection:AddLabel({
+    Text = "Contributor: Jakob"
+})
 detailssection:AddButton({
-    Name = "Activate Premium",
-    Flag = "detailssection_activatepremium",
-    Callback = function()
-        print("ActivatePremium")
-    end
-},
-{
     Name = "Copy Discord Link",
     Flag = "detailssection_discordlink",
     Callback = function()
@@ -7503,7 +7496,6 @@ detailssection:AddButton({
 		setclipboard(tostring(copy))
     end
 })
-
 
 --[[
 if options.Info then
