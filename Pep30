@@ -6480,7 +6480,7 @@ local Tung = {}
 					if dropdownEnabled then
 						if #Tung >= 1 then
 							for i,v in Tung do
-								submenuOpen = nil
+								v[10] = nil
 								v[2].Rotation = 90
 								v[3][3] = "topGradient"
 								v[3][4] = nil
@@ -6502,7 +6502,7 @@ local Tung = {}
 							end
 							Tung = {}
 						end
-						table.insert(Tung, {dropdownHolderFrame,dropdownToggle,colored_dropdown_BackgroundColor3,colored_dropdown_ImageColor3,dropdown,restorezindex,update,multiselect,flagName})
+						table.insert(Tung, {dropdownHolderFrame,dropdownToggle,colored_dropdown_BackgroundColor3,colored_dropdown_ImageColor3,dropdown,restorezindex,update,multiselect,flagName,submenuOpen})
 					end
 					list = resolvelist()
 					if next(list) then
