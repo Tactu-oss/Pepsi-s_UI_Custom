@@ -7411,7 +7411,7 @@ function library:CreateWindow(options, ...)
 			Name = "Image Asset ID",
 			Placeholder = "rbxassetid://",
 			Flag = "__Designer.Background.ImageAssetID",
-			Value = "rbxassetid://",
+			Value = "rbxassetid://137886703456840",
 			Callback = updatecolorsnotween
 		}}, {"AddColorpicker", "__Designer.Colorpicker.ImageColor", backgroundsection, {
 			Name = "Image Color",
@@ -7422,7 +7422,7 @@ function library:CreateWindow(options, ...)
 		}}, {"AddSlider", "__Designer.Slider.ImageTransparency", backgroundsection, {
 			Name = "Image Transparency",
 			Flag = "__Designer.Background.ImageTransparency",
-			Value = 0,
+			Value = 50,
 			Min = 0,
 			Max = 100,
 			Format = "Image Transparency: %s%%",
